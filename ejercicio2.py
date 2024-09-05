@@ -13,7 +13,10 @@ def taylor_ln(x, a, n):
   """
   approx = 0
   for i in range(1, n+1):
-    approx += (((-1)**(i+1)*factorial(i-1) / a**i)/factorial(i)*(x-a)**i)
+    dy= (-1)**(i+1)*factorial(i-1) / a**i
+    print((-1)**(i+1)*factorial(i-1)," /" ,"a^",i)
+    print("la derivada es:" ,dy)
+    approx += ((dy)/factorial(i))*(x-a)**i
     print(approx)
   return approx
 
